@@ -8,6 +8,3 @@ start(_StartType, _StartArgs) -> supervisor:start_link({local, ?MODULE}, ?MODULE
 stop(_State) -> ok.
 init([]) -> {ok, { {one_for_one, 5, 10}, []} }.
 
-metainfo() -> #schema { name = kvs,    tables = tables() }.
-tables() -> [  ].
-
